@@ -1,0 +1,36 @@
+<!-- 
+    Learn About SVG in D3:
+
+    SVG stands for Scalable Vector Graphics.
+
+    Here "scalable" means that, if you zoom in or out on an object, it would not
+    appear pixelated. It scales with the display system, whether it's on a small
+    mobile screen or a large TV monitor.
+
+    SVG is used to make common geometric shapes. Since D3 maps data into a visual
+    representation, it uses SVG to create the shapes of the visualization. SVG
+    shapes for a web page must go within an HTML 'svg' tag.
+
+    CSS can be scalable when styles use relative units (such as 'vh', 'vw', or
+    percentages), but using SVG is more flexible to build data visualization.
+-->
+
+<style>
+    svg {
+        background-color: pink;
+    }
+</style>
+<body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+        const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+        
+        const w = 500;
+        const h = 100;
+        
+        const svg = d3.select("body")
+                        .append("svg")
+                        .attr("height", h)
+                        .attr("width", w);
+    </script>
+</body>
