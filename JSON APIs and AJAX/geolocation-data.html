@@ -1,0 +1,35 @@
+<!-- 
+    Get Geolocation Data to Find a User's GPS Coordinates:
+
+    Another cool thing you can do is access you user's current location. Every
+    browser has a build in navigation that can give you this information.
+
+    The navigator will het the user's current longitude and latitude. You will see
+    a prompt to allow or block this site from knowing your current location.
+
+    Here's the code that does this:
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            document.getElementById('data').innerHTML = "latitude: " + position.coords.latitude
+                + "<br>longitude: " + position.coords.longitude;
+        });
+    }
+-->
+
+<script>
+  
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            document.getElementById('data').innerHTML="latitude: "+ position.coords.latitude + "<br>longitude: " + position.coords.longitude;
+    });
+}
+
+</script>
+<body>
+    
+    <h4>You are here:</h4>
+    <div id="data">
+        
+    </div>
+</body>
